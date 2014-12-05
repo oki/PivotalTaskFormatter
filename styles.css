@@ -1,0 +1,14 @@
+.harvest {
+  background-color: orange !important;
+
+}
+.harvest:before {
+  content: "H" !important;
+  margin: 0 !important;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+section.model_details .story .persistence.has_flash .save, section.model_details .story .persistence.has_flash .close {
+  width: 90px !important;
+}
