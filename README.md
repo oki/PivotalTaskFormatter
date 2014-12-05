@@ -1,7 +1,7 @@
 ## ABOUT
 Extension adds a button to each tasks on Pivotaltracker to copy to clipboard task in format: *[PT 123456789] Some task name*.
 
-## INSTALATION
+## INSTALLATION
 
 1. Install gem: `bundle install`
 2. Create extension for Chrome: `rake chrome:create`
