@@ -4,7 +4,7 @@ jQuery(function (){
   $(document.body).on('click', function (e) {
     var target = e.target;
     if ( $(target).hasClass('expander') ) {
-      appendButton( $(target).parents('.story.item').data('id') );
+      appendButton( $(target).parents('.story.item.model').data('id') );
     }
   });
 
@@ -23,11 +23,20 @@ jQuery(function (){
       storyName   = $story.find('.story_name').text() || $story.find('textarea.name').text();
       storyFormat = '[PT ' + storyID + '] ' + storyName;
 
-      $story
-        .find('.actions')
-        .prepend('<button class="harvest autosaves clipboard_button" data-clipboard-text="'+storyFormat+'"></button>');
-    });
+      $button = $('<button />', {
+          class: "harvest autosaves left_endcap clipboard_button",
+          title: "Copy formatted story to clipboard",
+          'data-clipboard-text': storyFormat
+      }).on('click', function (e) {
+        e.preventDefault();
+      });
 
+      $wrap = $story.find('.edit').find('.controls').find('.actions');
+
+      $wrap.prepend( $button );
+      $wrap.find('button.link.left_endcap').toggleClass('left_endcap capped')
+      $wrap.css({ 'width' : '315px' });
+    });
 
   };
 
