@@ -3,7 +3,7 @@
 
   "name": "Pivotal tasks formatter",
   "description": "Copy formated Pivotaltracker task to clipboard, e.g. [PT 123456789] Some story name",
-  "version": "1.0",
+  "version": "0.2.1",
   "author": "Jarek Pelczynski",
 
   "content_scripts": [
